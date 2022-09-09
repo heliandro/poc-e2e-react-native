@@ -1,14 +1,15 @@
 import textos from "../mock/textos";
+import { TextoMock } from '../mock/textos';
 
 export default class MockTextoService {
 
     constructor() {}
 
-    getTextos(): any {
+    getTextos(): TextoMock {
         return textos;
     }
 
-    getTextosPorTela(tela: string): any {
+    getTextosPorTela(tela: string): TextoMock {
         return textos[tela];
     }
 }

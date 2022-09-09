@@ -7,6 +7,7 @@ import MockTextoService from './src/servicos/MockTextoService';
 import MockUrlService from './src/servicos/MockUrlService';
 import useTextos from './src/hooks/useTextos';
 import useUrls from './src/hooks/useUrls';
+import Sobre from './src/telas/Sobre';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,10 +20,12 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home">
-          {() => <Home mockTextoService={mockTextoService} mockUrlService={mockUrlService}
+          {(props) => <Home navigation={props.navigation} mockTextoService={mockTextoService} mockUrlService={mockUrlService}
           useTextos={useTextos} useUrls={useUrls}/>}
         </Stack.Screen>
-        
+        <Stack.Screen name="Sobre">
+          {(props) => <Sobre mockTextoService={mockTextoService} useTextos={useTextos} />}
+        </Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );
