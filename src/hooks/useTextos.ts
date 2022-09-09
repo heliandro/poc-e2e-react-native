@@ -6,7 +6,6 @@ export default function useTextos (mockTextoService: MockTextoService, tela?: st
 
     useEffect(() => {
         const output = tela ? mockTextoService.getTextosPorTela(tela) : mockTextoService.getTextos();
-        console.log(output);
         setTextos(output);
     }, []);
 
