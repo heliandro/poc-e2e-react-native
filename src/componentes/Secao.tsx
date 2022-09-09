@@ -10,7 +10,7 @@ export default function Secao(props: any) {
                 {
                     color: Colors.black,
                 },
-            ]}>{props.titulo}</Text>
+            ]} testID="titulo">{props.titulo}</Text>
             <Text style={[
                 styles.sectionDescription,
                 {

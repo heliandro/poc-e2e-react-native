@@ -3,9 +3,9 @@ import { Button, SafeAreaView, StatusBar, Text, View, StyleSheet } from 'react-n
 import {Colors, Header} from 'react-native/Libraries/NewAppScreen';
 import Secao from '../componentes/Secao';
 import { TextoMock } from '../mock/textos';
-import { UrlMock } from '../mock/urls';
-import MockTextoService from '../servicos/MockTextoService';
+import { UrlMock } from '../mock/urls';import MockTextoService from '../servicos/MockTextoService';
 import MockUrlService from '../servicos/MockUrlService';
+;
 
 type HomeParams = {
     navigation: any,
@@ -36,6 +36,7 @@ export default function Home ({ navigation, mockTextoService, mockUrlService, us
           </Secao>
           <View style={styles.containerButton}>
             <Button 
+                testID="botao_sobre"
                 title={navegacao?.botaoSobre.texto}
                 onPress={() => navigation.navigate(navegacao?.botaoSobre.acao)}
             />

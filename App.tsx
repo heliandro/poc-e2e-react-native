@@ -21,7 +21,7 @@ const App = () => {
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home">
           {(props) => <Home navigation={props.navigation} mockTextoService={mockTextoService} mockUrlService={mockUrlService}
-          useTextos={useTextos} useUrls={useUrls}/>}
+          useTextos={useTextos} useUrls={useUrls} />}
         </Stack.Screen>
         <Stack.Screen name="Sobre">
           {(props) => <Sobre mockTextoService={mockTextoService} useTextos={useTextos} />}
