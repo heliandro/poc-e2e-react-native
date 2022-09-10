@@ -1,0 +1,4 @@
+#!/bin/sh
+bash .husky/_/husky.sh
+
+npx --no -- commitlint --edit \${1}
